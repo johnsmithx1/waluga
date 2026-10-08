@@ -112,52 +112,69 @@
     </section>
 
     <section class="loc wrap" id="location" aria-labelledby="loc-h">
-      <p class="kicker">Location</p>
-      <h2 id="loc-h">Waluga Park, Lake Oswego</h2>
-      <p id="loc-body"></p>
+      <div class="loc-grid">
+        <div class="loc-copy">
+          <p class="kicker">Location</p>
+          <h2 id="loc-h">Waluga Park,<br>Lake Oswego</h2>
+          <p id="loc-body"></p>
+          <ul class="loc-list" id="loc-list"></ul>
+          <p class="fine" id="loc-note"></p>
+        </div>
+        <figure class="loc-map">
+          <div class="map-frame" id="map-frame"></div>
+          <figcaption class="map-card">
+            <span class="map-title">Waluga Park <span aria-hidden="true">·</span> Lot 9</span>
+            <span class="map-addr" id="map-addr"></span>
+            <span class="map-row">
+              <span class="map-gps" id="map-gps"></span>
+              <a class="map-dir" id="map-dir" target="_blank" rel="noopener">Directions <span aria-hidden="true">→</span></a>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="inq-sec" id="inquire" aria-labelledby="inq-h">
       <div class="wrap inq">
-        <div>
+        <div class="inq-info">
           <p class="kicker">Inquire</p>
-          <h2 id="inq-h">Be among the first to see it</h2>
-          <p>Tell us a little about what you are looking for and we will be in touch with plans, timing, and tour details as they are ready.</p>
+          <h2 id="inq-h">Start a private conversation about Lot 9</h2>
+          <p class="inq-lede">Interested buyers and their brokers can request floor plans, the finishes package, and a site visit.</p>
+          <dl class="contact" id="contact"></dl>
         </div>
-        <form id="inquiry" data-kind="inquiry" novalidate>
-          <div class="row">
-            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-          </div>
-          <div class="row">
-            <div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
-            <div class="field"><label for="f-timeline">Timeline</label>
+        <div class="inq-card">
+          <h3>Request the property package</h3>
+          <p class="inq-sub">Complete the details below to receive plans now and pricing when it is released.</p>
+          <form id="inquiry" data-kind="inquiry" novalidate>
+            <div class="row">
+              <div class="field"><label for="f-name">Full name *</label><input id="f-name" name="name" autocomplete="name" required></div>
+              <div class="field"><label for="f-email">Email address *</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="(503) 000-0000"></div>
+              <div class="field"><label for="f-rep">Buyer representation</label>
+                <select id="f-rep" name="representation">
+                  <option>Looking for myself / family</option>
+                  <option>Licensed broker representing a buyer</option>
+                  <option>Trust or portfolio representative</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="f-timeline">Desired move-in</label>
               <select id="f-timeline" name="timeline">
-                <option value="">Select</option>
-                <option>Ready now</option>
-                <option>Within 3 to 6 months</option>
-                <option>6 to 12 months</option>
-                <option>Just exploring</option>
+                <option>Spring 2027 (scheduled completion)</option>
+                <option>Summer or autumn 2027</option>
+                <option>Flexible / exploring Lake Oswego</option>
               </select>
             </div>
-          </div>
-          <div class="field"><label for="f-interest">I am interested in</label>
-            <select id="f-interest" name="interest">
-              <option value="">Select</option>
-              <option>Touring when available</option>
-              <option>Pricing and availability</option>
-              <option>Floor plans and finishes</option>
-              <option>Working with my own agent</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="field"><label for="f-message">Message <span class="opt">(optional)</span></label><textarea id="f-message" name="message" rows="4"></textarea></div>
-          <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div id="turnstile"></div>
-          <label class="check"><input type="checkbox" name="consent" required> <span>I agree to be contacted about this property by email or phone.</span></label>
-          <button class="btn btn-solid" type="submit">Send inquiry <span aria-hidden="true">→</span></button>
-          <p class="form-msg" role="status" aria-live="polite"></p>
-        </form>
+            <div class="field"><label for="f-message">Questions or site visit request</label><textarea id="f-message" name="message" rows="3" placeholder="Floor plans, garage details, finish selection windows..."></textarea></div>
+            <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div id="turnstile"></div>
+            <label class="check"><input type="checkbox" name="consent" required> <span>Keep me informed about construction milestones and release dates, and contact me about this property by email or phone.</span></label>
+            <button class="btn btn-pale" type="submit">Send private inquiry <span aria-hidden="true">→</span></button>
+            <p class="form-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>

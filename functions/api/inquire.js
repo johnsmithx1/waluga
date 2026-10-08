@@ -27,6 +27,7 @@ export async function onRequestPost({ request, env }) {
     phone: clip(d.phone, 40),
     timeline: clip(d.timeline, 60),
     interest: clip(d.interest, 80),
+    representation: clip(d.representation, 80),
     message: clip(d.message, 3000),
     page: clip(d.page, 300)
   };
@@ -44,7 +45,7 @@ export async function onRequestPost({ request, env }) {
     return json({ error: 'Inquiries are not available right now. Please try again later.' }, 503);
   }
 
-  const rows = [['Name', lead.name], ['Email', lead.email], ['Phone', lead.phone], ['Timeline', lead.timeline], ['Interest', lead.interest], ['Message', lead.message], ['Page', lead.page]]
+  const rows = [['Name', lead.name], ['Email', lead.email], ['Phone', lead.phone], ['Representation', lead.representation], ['Timeline', lead.timeline], ['Interest', lead.interest], ['Message', lead.message], ['Page', lead.page]]
     .filter(([, v]) => v);
   const html = `<h2>New inquiry: Waluga Park Lot 9</h2><table cellpadding="6">${rows
     .map(([k, v]) => `<tr><td><b>${esc(k)}</b></td><td>${esc(v).replace(/\n/g, '<br>')}</td></tr>`).join('')}</table>`;

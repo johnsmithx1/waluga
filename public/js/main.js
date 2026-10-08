@@ -199,6 +199,23 @@
 
   function renderFooter(site) {
     $('#loc-body').textContent = site.neighborhood.body;
+    const loc = site.location;
+    if (loc) {
+      $('#loc-list').append(...loc.highlights.map((x) => h('li', {}, h('b', { text: x.k }), x.v)));
+      $('#loc-note').textContent = loc.note || '';
+      const q = encodeURIComponent(loc.mapQuery);
+      $('#map-frame').append(h('iframe', { title: 'Map showing ' + loc.address + ', ' + loc.cityLine, src: `https://maps.google.com/maps?q=${q}&z=15&output=embed`, loading: 'lazy', referrerpolicy: 'no-referrer-when-downgrade', allowfullscreen: true }));
+      $('#map-addr').textContent = loc.address + ' · ' + loc.cityLine;
+      $('#map-gps').textContent = `${loc.lat.toFixed(4)}° N, ${Math.abs(loc.lon).toFixed(4)}° W`;
+      $('#map-dir').href = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
+    }
+    const L = site.listing, row = (k, ...v) => [h('dt', { text: k }), h('dd', {}, ...v)];
+    $('#contact').append(
+      ...row('Listing agent', h('span', { class: 'c-name', text: L.agent }), h('span', { class: 'c-sub', text: L.broker })),
+      ...(L.phone ? row('Direct telephone', h('a', { href: 'tel:' + L.phone.replace(/[^\d+]/g, ''), text: L.phone })) : []),
+      ...(L.email ? row('Direct inquiries', h('a', { href: 'mailto:' + L.email, text: L.email })) : []),
+      ...(loc ? row('Homesite', h('span', { text: loc.address }), h('span', { class: 'c-sub', text: loc.cityLine })) : [])
+    );
     $('#foot-city').textContent = site.property.city;
     const l = site.listing;
     $('#foot-listing').append(h('p', { text: l.broker }), h('p', { text: l.agent }), h('p', { text: l.license }));

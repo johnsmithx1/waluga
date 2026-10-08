@@ -98,7 +98,9 @@
     "license": "[Oregon license number]",
     "builder": "Brother's Building",
     "designer": "House West Design",
-    "confirm": "Source: agent's Zillow profile. Confirm exact legal brokerage name and the license number; both are required in Oregon real estate advertising."
+    "confirm": "Source: agent's Zillow profile. Confirm exact legal brokerage name and the license number; both are required in Oregon real estate advertising.",
+    "phone": "",
+    "email": ""
   },
   "disclaimer": "Images are artist's renderings and are for illustration only. Finishes, dimensions, and features are subject to change. Floor plans are approximate and should not be used for scaling.",
   "hero": {
@@ -126,7 +128,30 @@
   ],
   "neighborhood": {
     "title": "Waluga Park, Lake Oswego",
-    "body": "[Neighborhood copy to come.]",
-    "confirm": "No neighborhood facts are in the deck. Supply or approve copy before launch."
+    "body": "Lot 9 sits on Park Bluff Place, beside Waluga Park, a short drive from Lake Grove and downtown Lake Oswego.",
+    "confirm": "Copy is limited to verifiable facts. Have the agent approve or expand it."
+  },
+  "location": {
+    "address": "4992 Park Bluff Pl",
+    "cityLine": "Lake Oswego, OR 97035",
+    "lat": 45.41292,
+    "lon": -122.7273,
+    "mapQuery": "4992 Park Bluff Pl, Lake Oswego, OR 97035",
+    "highlights": [
+      {
+        "k": "About 0.2 mi",
+        "v": "Waluga Park, next door"
+      },
+      {
+        "k": "About 4 min",
+        "v": "Lake Grove shops and dining"
+      },
+      {
+        "k": "About 10 min",
+        "v": "Downtown Lake Oswego and Millennium Plaza Park"
+      }
+    ],
+    "note": "Distances and drive times are approximate, from mapping data.",
+    "_source": "Coordinates are the Park Bluff Pl street centre from OpenStreetMap (house number not yet mapped). Drive times from OSRM; park distance is straight-line."
   }
 }
