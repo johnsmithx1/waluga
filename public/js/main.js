@@ -36,7 +36,7 @@
   };
 
   async function load() {
-    const get = (u) => fetch(u).then((r) => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
+    const get = (u) => fetch(u, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
     const [site, rooms, media] = await Promise.all([get('data/site.json'), get('data/rooms.json'), get('data/media.json')]);
     return { site, rooms: rooms.rooms.filter((r) => r.public !== false), media };
   }
@@ -94,7 +94,7 @@
         ? h('div', { class: 'mock' }, picture({ src: it.src, fallback: it.fallback, alt: '' }),
             h('div', { class: 'mock-play' }, h('b', { text: '▶' }), h('span', { text: 'The film is on its way' })))
         : picture({ src: it.src, fallback: it.fallback, alt: it.title, label: it.title }));
-    $('#lb-cap').textContent = it.mock ? 'Film · coming soon' : it.title + (it.type === 'render' ? ' · Rendering' : '');
+    $('#lb-cap').textContent = it.mock ? 'Film · coming soon' : it.title + (it.type === 'render' ? ' · Rendering' : '') + (it.note ? ' · ' + it.note : '');
     lb.classList.toggle('single', lbItems.length < 2);
   }
   function lbOpen(items, i) { lbItems = items; lbIndex = i; lbShow(); if (!lb.open) lb.showModal(); }
@@ -151,6 +151,22 @@
     });
     stage.addEventListener('click', (e) => { if (stage.dataset.swiped) e.stopImmediatePropagation(); }, true);
     go(0);
+  }
+
+  function renderInteriors(media) {
+    const items = media.interiors || [];
+    if (!items.length) { $('#interiors').remove(); return; }
+    const groups = ['All', ...new Set(items.map((i) => i.group))];
+    const grid = $('#int-grid'), bar = $('#int-filters');
+    const paint = (g) => {
+      const list = g === 'All' ? items : items.filter((i) => i.group === g);
+      grid.replaceChildren(...list.map((it, k) => h('li', {}, h('button', { class: 'int-tile', type: 'button', 'aria-label': 'Enlarge ' + it.title, onclick: () => lbOpen(list, k) },
+        h('span', { class: 'int-img' }, picture({ src: it.src, alt: it.title + ' rendering', label: it.title })),
+        h('span', { class: 'int-cap' }, h('b', { text: it.title }), it.note ? h('small', { text: it.note }) : null)))));
+      bar.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', c.dataset.g === g));
+    };
+    bar.append(...groups.map((g) => h('button', { class: 'chip', type: 'button', 'data-g': g, onclick: () => paint(g), text: g })));
+    paint('All');
   }
 
   function renderPlans(site) {
@@ -277,7 +293,7 @@
   inquiry.addEventListener('input', (e) => e.target.removeAttribute && e.target.removeAttribute('aria-invalid'));
 
   load().then(({ site, rooms, media }) => {
-    renderHero(site); renderSpecs(site); renderReel(media); renderPlans(site);
+    renderHero(site); renderSpecs(site); renderReel(media); renderPlans(site); renderInteriors(media);
     renderFinishes(site, rooms); renderProgress(media); renderFooter(site);
     initTurnstile(site.turnstileSiteKey);
   }).catch((err) => {

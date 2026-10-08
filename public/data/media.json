@@ -89,5 +89,108 @@
       "src": "assets/media/site-exterior-02.jpg",
       "video": null
     }
-  ]
+  ],
+  "interiors": [
+    {
+      "src": "assets/interiors/foyer.jpg",
+      "title": "Foyer",
+      "group": "Living spaces",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/great-room.jpg",
+      "title": "Great room",
+      "group": "Living spaces",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/kitchen.jpg",
+      "title": "Kitchen",
+      "group": "Living spaces",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/dining.jpg",
+      "title": "Dining room",
+      "group": "Living spaces",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/powder-bath.jpg",
+      "title": "Powder bath",
+      "group": "Living spaces",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/study.jpg",
+      "title": "Study",
+      "group": "Living spaces",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/primary-bedroom.jpg",
+      "title": "Primary bedroom",
+      "group": "Primary suite",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/primary-bath-1.jpg",
+      "title": "Primary bath",
+      "group": "Primary suite",
+      "type": "render",
+      "note": "Shower door not shown."
+    },
+    {
+      "src": "assets/interiors/primary-bath-2.jpg",
+      "title": "Primary bath, vanity and shower",
+      "group": "Primary suite",
+      "type": "render",
+      "note": "Shower door not shown."
+    },
+    {
+      "src": "assets/interiors/primary-closet.jpg",
+      "title": "Primary closet",
+      "group": "Primary suite",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/upper-guest-bath.jpg",
+      "title": "Upper guest bath",
+      "group": "Guest and utility",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/guest-bath-4.jpg",
+      "title": "Guest bath 4",
+      "group": "Guest and utility",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/laundry.jpg",
+      "title": "Laundry",
+      "group": "Guest and utility",
+      "type": "render",
+      "note": "Cabinets will not run to the ceiling as shown."
+    },
+    {
+      "src": "assets/interiors/lower-living.jpg",
+      "title": "Lower-level living",
+      "group": "Lower level",
+      "type": "render",
+      "note": "Built-ins and wall treatment are optional."
+    },
+    {
+      "src": "assets/interiors/lower-kitchenette.jpg",
+      "title": "Lower-level kitchenette",
+      "group": "Lower level",
+      "type": "render"
+    },
+    {
+      "src": "assets/interiors/lower-powder.jpg",
+      "title": "Lower-level powder bath",
+      "group": "Lower level",
+      "type": "render"
+    }
+  ],
+  "_interiorsSource": "Renderings cropped from the House West Design deck; notes are the deck's own footnotes."
 }
