@@ -177,6 +177,7 @@
       h('h3', { text: m.name }), h('p', { class: 'mat-note', text: m.note }), h('p', { class: 'mat-where', text: m.where }))));
     const order = ['Exterior', 'Living spaces', 'Primary suite', 'Guest and utility', 'Lower level', 'Whole home'];
     const wrap = $('#rooms');
+    $('#sch-count').textContent = `Every selection across ${rooms.length} rooms`;
     for (const g of order) {
       const list = rooms.filter((r) => r.group === g); if (!list.length) continue;
       wrap.append(h('p', { class: 'group-h', text: g }));

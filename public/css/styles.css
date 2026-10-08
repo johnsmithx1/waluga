@@ -141,9 +141,19 @@ details li b { font-weight: 400; color: var(--coast); display: block; font-size:
 .mat h3 { font-size: 20px; margin: 14px 0 4px; }
 .mat-note { margin: 0; font-size: 14px; color: var(--black); }
 .mat-where { margin: 4px 0 0; font: 400 11px/1.5 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
-details.schedule { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-details.schedule > summary { font: 400 12px/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--bark); padding: 20px 0; }
-details.schedule[open] > summary { border-bottom: 1px solid var(--line); }
+details.schedule { border: 0; margin-top: 8px; }
+details.schedule > summary { align-items: center; gap: 18px; padding: 18px 22px; border: 1px solid var(--bark); background: var(--paper); color: var(--bark); font: inherit; transition: background .2s, color .2s; }
+details.schedule > summary::after { display: none; }
+details.schedule > summary:hover, details.schedule[open] > summary { background: var(--bark); color: var(--cream); }
+.sch-text { display: grid; gap: 4px; }
+.sch-text b { font: 600 14px/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+.sch-text small { font: 400 13px/1.3 var(--sans); letter-spacing: .04em; opacity: .75; }
+.sch-icon { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid currentColor; display: grid; place-items: center; transition: transform .3s ease; }
+.sch-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+details.schedule > summary:hover .sch-icon { animation: nudge 1s ease-in-out infinite; }
+details.schedule[open] .sch-icon { transform: rotate(180deg); animation: none; }
+@keyframes nudge { 50% { transform: translateY(3px); } }
+details.schedule[open] #rooms { border: 1px solid var(--line); border-top: 0; padding: 4px 22px 24px; background: var(--paper); }
 details.schedule #rooms { padding-bottom: 24px; }
 details.schedule #rooms details:last-child { border-bottom: 0; }
 @media (max-width: 960px) { .board { grid-template-columns: repeat(2, 1fr); } }
@@ -297,4 +307,5 @@ dialog#lightbox.single .lb-prev, dialog#lightbox.single .lb-next { visibility: h
   .reel-btns { margin-left: auto; }
   .thumb { width: 84px; }
 }
-@media (prefers-reduced-motion: reduce) { .hero-media.kb img, .reel-stage.swap img { animation: none; } }
+@media (prefers-reduced-motion: reduce) { details.schedule > summary:hover .sch-icon { animation: none; } .hero-media.kb img, .reel-stage.swap img { animation: none; } }
+.schedule + .fine { margin-top: 14px; }
