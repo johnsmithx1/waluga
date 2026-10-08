@@ -93,14 +93,15 @@
     }
   ],
   "listing": {
-    "broker": "TEC Real Estate",
-    "agent": "Abigail Moschetti",
-    "license": "[Oregon license number]",
+    "broker": "TEC Real Estate | Ninebark Real Estate",
+    "agent": "Abby Moschetti",
+    "license": "OR Lic. #201230030 \u00b7 WA Lic. #24003411",
     "builder": "Brother's Building",
     "designer": "House West Design",
-    "confirm": "Source: agent's Zillow profile. Confirm exact legal brokerage name and the license number; both are required in Oregon real estate advertising.",
-    "phone": "",
-    "email": ""
+    "confirm": "Details from the agent's signature block. Confirm the brokerage line and license wording meet Oregon advertising rules.",
+    "phone": "541.777.1739",
+    "email": "abby.m.realtor@gmail.com",
+    "title": "Real Estate Broker"
   },
   "disclaimer": "Images are artist's renderings and are for illustration only. Finishes, dimensions, and features are subject to change. Floor plans are approximate and should not be used for scaling.",
   "hero": {

@@ -211,14 +211,14 @@
     }
     const L = site.listing, row = (k, ...v) => [h('dt', { text: k }), h('dd', {}, ...v)];
     $('#contact').append(
-      ...row('Listing agent', h('span', { class: 'c-name', text: L.agent }), h('span', { class: 'c-sub', text: L.broker })),
+      ...row('Listing agent', h('span', { class: 'c-name', text: L.agent }), h('span', { class: 'c-sub', text: [L.title, L.broker].filter(Boolean).join(' · ') })),
       ...(L.phone ? row('Direct telephone', h('a', { href: 'tel:' + L.phone.replace(/[^\d+]/g, ''), text: L.phone })) : []),
       ...(L.email ? row('Direct inquiries', h('a', { href: 'mailto:' + L.email, text: L.email })) : []),
       ...(loc ? row('Homesite', h('span', { text: loc.address }), h('span', { class: 'c-sub', text: loc.cityLine })) : [])
     );
     $('#foot-city').textContent = site.property.city;
     const l = site.listing;
-    $('#foot-listing').append(h('p', { text: l.broker }), h('p', { text: l.agent }), h('p', { text: l.license }));
+    $('#foot-listing').append(h('p', { text: l.agent + (l.title ? ', ' + l.title : '') }), h('p', { text: l.broker }), h('p', { text: l.license }), l.phone ? h('p', {}, h('a', { href: 'tel:' + l.phone.replace(/[^\d+]/g, ''), text: l.phone })) : null, l.email ? h('p', {}, h('a', { href: 'mailto:' + l.email, text: l.email })) : null);
     $('#foot-credits').append(h('p', { text: 'Builder: ' + l.builder }), h('p', { text: 'Design: ' + l.designer }));
     $('#foot-disclaimer').textContent = site.disclaimer;
   }
