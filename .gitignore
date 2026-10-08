@@ -1,0 +1,13 @@
+node_modules/
+.wrangler/
+.dev.vars
+.DS_Store
+# source PDF and extraction output stay local (PDF is ~250 MB)
+*.pdf
+_work/
+# deck-derived placeholder visuals, replace with originals in assets/media
+public/assets/_deck/
+
+mockup*.png
+Pasted*.png
+_originals/

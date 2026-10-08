@@ -1,0 +1,132 @@
+{
+  "_note": "Edit this file to change copy and facts. Items with \"confirm\": true need a decision from the client before launch.",
+  "property": {
+    "name": "Waluga Park Lot 9",
+    "short": "Waluga Park \u00b7 Lot 9",
+    "city": "Lake Oswego, Oregon",
+    "status": "Coming Spring 2027",
+    "headline": "A quieter kind of luxury",
+    "subhead": "Thoughtfully designed for the way you live.",
+    "specs": [
+      {
+        "icon": "area",
+        "label": "Square feet",
+        "value": "3,625"
+      },
+      {
+        "icon": "bed",
+        "label": "Bedrooms",
+        "value": "4 + Den"
+      },
+      {
+        "icon": "bath",
+        "label": "Bathrooms",
+        "value": "4 Full + 2 Half"
+      },
+      {
+        "icon": "garage",
+        "label": "Garage",
+        "value": "2-Car"
+      }
+    ],
+    "levels": [
+      "Main",
+      "Upper",
+      "Lower"
+    ]
+  },
+  "story": {
+    "eyebrow": "Design for a more grounded life",
+    "title": "Inspired by the Pacific Northwest",
+    "body": "Clean lines, natural textures, and a connection to the outdoors define this Lake Oswego home. Large windows, warm oak, honed stone, and a quiet palette drawn from the landscape come together in a residence designed for seamless indoor-outdoor living."
+  },
+  "palette": [
+    {
+      "name": "Drift of Mist",
+      "code": "SW",
+      "hex": "#dedad4",
+      "use": "Main walls, trim, ceilings"
+    },
+    {
+      "name": "Stone Hearth",
+      "code": "BM 984",
+      "hex": "#c4b9a9",
+      "use": "Cabinetry, hood, accent rooms"
+    },
+    {
+      "name": "Rocky Coast",
+      "code": "BM 1595",
+      "hex": "#6e7273",
+      "use": "Depth, lower-level powder bath"
+    },
+    {
+      "name": "Black Magic",
+      "code": "SW",
+      "hex": "#303030",
+      "use": "Architectural contrast"
+    }
+  ],
+  "materials": [
+    {
+      "k": "Floors",
+      "v": "Brushed Oak Maccaroon"
+    },
+    {
+      "k": "Walls",
+      "v": "Drift of Mist + Stone Hearth"
+    },
+    {
+      "k": "Lighting finishes",
+      "v": "Brass"
+    },
+    {
+      "k": "Counters",
+      "v": "Taj Mahal Quartzite + Calacatta Premata"
+    },
+    {
+      "k": "Plumbing fixtures",
+      "v": "Luxe Gold + Black"
+    },
+    {
+      "k": "Door hardware",
+      "v": "Black"
+    }
+  ],
+  "listing": {
+    "broker": "TEC Real Estate",
+    "agent": "Abigail Moschetti",
+    "license": "[Oregon license number]",
+    "builder": "Brother's Building",
+    "designer": "House West Design",
+    "confirm": "Source: agent's Zillow profile. Confirm exact legal brokerage name and the license number; both are required in Oregon real estate advertising."
+  },
+  "disclaimer": "Images are artist's renderings and are for illustration only. Finishes, dimensions, and features are subject to change. Floor plans are approximate and should not be used for scaling.",
+  "hero": {
+    "image": "assets/media/hero.jpg",
+    "video": "assets/media/hero.mp4",
+    "fallback": "assets/_deck/exterior.jpg",
+    "alt": "Exterior rendering of Waluga Park Lot 9"
+  },
+  "floorplans": [
+    {
+      "level": "Main",
+      "src": "assets/media/plan-main.jpg",
+      "fallback": "assets/_deck/plan-main.jpg"
+    },
+    {
+      "level": "Upper",
+      "src": "assets/media/plan-upper.jpg",
+      "fallback": "assets/_deck/plan-upper.jpg"
+    },
+    {
+      "level": "Lower",
+      "src": "assets/media/plan-lower.jpg",
+      "fallback": "assets/_deck/plan-lower.jpg"
+    }
+  ],
+  "neighborhood": {
+    "title": "Waluga Park, Lake Oswego",
+    "body": "[Neighborhood copy to come. Add verified details only: park access, lake access, schools, commute.]",
+    "confirm": "No neighborhood facts are in the deck. Supply or approve copy before launch."
+  }
+}

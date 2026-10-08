@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waluga Park · Lot 9 | A new home in Lake Oswego, Oregon</title>
+  <meta name="description" content="A quieter kind of luxury. A new 3,625 sq ft home at Waluga Park in Lake Oswego, Oregon, designed for the way you live. Coming soon.">
+  <meta property="og:title" content="Waluga Park · Lot 9">
+  <meta property="og:description" content="A quieter kind of luxury, thoughtfully designed for the way you live. Lake Oswego, Oregon.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f4f1ec">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top">
+    <a class="brand" href="#top" aria-label="Waluga Park Lot 9, back to top">Waluga Park <span aria-hidden="true">·</span> Lot 9</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#home">The home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#plans">Floor plans</a>
+      <a href="#finishes">Finishes</a>
+      <a href="#progress">Progress</a>
+      <a href="#location">Location</a>
+    </nav>
+    <a class="btn btn-solid btn-small" href="#inquire">Inquire <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" id="hero-media"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">A new home at Waluga Park</p>
+        <h1 id="hero-title">A quieter<br>kind of luxury</h1>
+        <p class="lede" id="hero-sub">Thoughtfully designed for the way you live.</p>
+        <p class="hero-meta"><span class="pill" id="status-pill">Coming soon</span><button class="film-btn" id="film-btn" type="button"><span aria-hidden="true">▶</span> Watch the film</button></p>
+        <form class="early" data-kind="early-access" novalidate>
+          <label class="sr" for="early-email">Email address</label>
+          <input id="early-email" name="email" type="email" autocomplete="email" placeholder="Your email for early access" required>
+          <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-solid" type="submit">Get early access</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="reel wrap" id="gallery" aria-roledescription="carousel" aria-label="Gallery">
+      <div class="reel-head">
+        <div><p class="kicker">Gallery</p><h2>A first look</h2></div>
+        <p class="fine">Renderings are artist concepts. Photos show the home as it is being built.</p>
+      </div>
+      <div class="reel-stage" id="reel-stage" tabindex="0" aria-live="polite" aria-label="Current image. Use the arrow keys to browse, Enter to enlarge."></div>
+      <div class="reel-bar">
+        <span class="reel-count" id="reel-count"></span>
+        <span class="reel-cap" id="reel-cap"></span>
+        <span class="reel-tag" id="reel-tag"></span>
+        <span class="reel-btns">
+          <button class="reel-prev" type="button" aria-label="Previous image">←</button>
+          <button class="reel-next" type="button" aria-label="Next image">→</button>
+          <button class="reel-open" type="button" aria-label="View full screen">⤢</button>
+        </span>
+      </div>
+      <div class="reel-thumbs" id="reel-thumbs" role="tablist" aria-label="Choose an image"></div>
+    </section>
+
+    <section class="specs" id="home" aria-label="Home at a glance">
+      <ul id="spec-list"></ul>
+    </section>
+
+    <section class="story wrap">
+      <div>
+        <p class="kicker" id="story-eyebrow"></p>
+        <h2 id="story-title"></h2>
+      </div>
+      <div>
+        <p id="story-body"></p>
+        <ul class="swatches" id="swatches" aria-label="Color palette"></ul>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#gallery">Explore the home <span aria-hidden="true">→</span></a>
+          <a class="btn btn-line" href="#inquire">Request details</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans-sec wrap" id="plans" aria-labelledby="plans-h">
+      <p class="kicker">Floor plans</p>
+      <h2 id="plans-h">Three levels of living</h2>
+      <div class="tabs" id="plan-tabs" role="tablist" aria-label="Floor level"></div>
+      <figure class="plan" id="plan-view"></figure>
+      <p class="fine">Floor plans are approximate and should not be used for scaling measurements.</p>
+    </section>
+
+    <section class="fin-sec wrap" id="finishes" aria-labelledby="fin-h">
+      <p class="kicker">Finishes</p>
+      <h2 id="fin-h">Materials, chosen to last</h2>
+      <dl class="materials" id="materials"></dl>
+      <div id="rooms"></div>
+      <p class="fine">Items marked Optional are available upgrades and are not included in every build. Selections are subject to change.</p>
+    </section>
+
+    <section class="prog-sec" id="progress" aria-labelledby="prog-h">
+      <div class="wrap">
+        <p class="kicker">Progress</p>
+        <h2 id="prog-h">Watch it come together</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <section class="loc wrap" id="location" aria-labelledby="loc-h">
+      <p class="kicker">Location</p>
+      <h2 id="loc-h">Waluga Park, Lake Oswego</h2>
+      <p id="loc-body"></p>
+    </section>
+
+    <section class="inq-sec" id="inquire" aria-labelledby="inq-h">
+      <div class="wrap inq">
+        <div>
+          <p class="kicker">Inquire</p>
+          <h2 id="inq-h">Be among the first to see it</h2>
+          <p>Tell us a little about what you are looking for and we will be in touch with plans, timing, and tour details as they are ready.</p>
+        </div>
+        <form id="inquiry" data-kind="inquiry" novalidate>
+          <div class="row">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="f-timeline">Timeline</label>
+              <select id="f-timeline" name="timeline">
+                <option value="">Select</option>
+                <option>Ready now</option>
+                <option>Within 3 to 6 months</option>
+                <option>6 to 12 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="f-interest">I am interested in</label>
+            <select id="f-interest" name="interest">
+              <option value="">Select</option>
+              <option>Touring when available</option>
+              <option>Pricing and availability</option>
+              <option>Floor plans and finishes</option>
+              <option>Working with my own agent</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-message">Message <span class="opt">(optional)</span></label><textarea id="f-message" name="message" rows="4"></textarea></div>
+          <input class="hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div id="turnstile"></div>
+          <label class="check"><input type="checkbox" name="consent" required> <span>I agree to be contacted about this property by email or phone.</span></label>
+          <button class="btn btn-solid" type="submit">Send inquiry <span aria-hidden="true">→</span></button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <p class="foot-brand">Waluga Park · Lot 9</p>
+          <p id="foot-city"></p>
+        </div>
+        <div id="foot-listing"></div>
+        <div id="foot-credits"></div>
+      </div>
+      <p class="fine" id="foot-disclaimer"></p>
+      <p class="fine">Equal Housing Opportunity.</p>
+    </div>
+  </footer>
+
+  <dialog id="lightbox" aria-label="Image viewer">
+    <button class="lb-close" aria-label="Close">×</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <figure><div id="lb-stage"></div><figcaption id="lb-cap"></figcaption></figure>
+    <button class="lb-next" aria-label="Next">›</button>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

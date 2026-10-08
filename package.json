@@ -1,0 +1,14 @@
+{
+  "name": "waluga-park-lot-9",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Marketing site for Waluga Park Lot 9, Lake Oswego",
+  "scripts": {
+    "dev": "wrangler pages dev public --compatibility-date=2026-10-01 --port 8788",
+    "deploy": "wrangler pages deploy public --project-name=waluga-park-lot-9"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "_note": "reel feeds the carousel under the hero. type is render, photo, or drone. Titles are generic: rename once each frame is identified. Optional per item: thumb, fallback.",
+  "reel": [
+    {
+      "src": "assets/media/hero.jpg",
+      "title": "Exterior",
+      "type": "render",
+      "fallback": "assets/_deck/exterior.jpg"
+    },
+    {
+      "src": "assets/media/exterior-finished.jpg",
+      "title": "Exterior, finished view",
+      "type": "render",
+      "_confirm": "Looks digitally finished from a site photo. Confirm it is a rendering and keep the label."
+    },
+    {
+      "src": "assets/media/site-exterior-01.jpg",
+      "title": "Exterior, framing stage (1)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/site-exterior-02.jpg",
+      "title": "Exterior, framing stage (2)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/site-exterior-03.jpg",
+      "title": "Exterior, framing stage (3)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/site-exterior-04.jpg",
+      "title": "Exterior, framing stage (4)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-01.jpg",
+      "title": "Interior framing (1)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-02.jpg",
+      "title": "Interior framing (2)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-03.jpg",
+      "title": "Interior framing (3)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-04.jpg",
+      "title": "Interior framing (4)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-05.jpg",
+      "title": "Interior framing (5)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-06.jpg",
+      "title": "Interior framing (6)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-07.jpg",
+      "title": "Interior framing (7)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-08.jpg",
+      "title": "Interior framing (8)",
+      "type": "photo"
+    },
+    {
+      "src": "assets/media/frame-09.jpg",
+      "title": "Interior framing (9)",
+      "type": "photo"
+    }
+  ],
+  "progress": [
+    {
+      "date": "2026-10-07",
+      "title": "Framing underway",
+      "note": "Exterior and interior framing photographed.",
+      "_confirm": "Date is when the files were added. Replace with the real shoot date.",
+      "type": "photo",
+      "src": "assets/media/site-exterior-02.jpg",
+      "video": null
+    }
+  ]
+}

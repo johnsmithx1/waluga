@@ -1,0 +1,12 @@
+name = "waluga-park-lot-9"
+pages_build_output_dir = "./public"
+compatibility_date = "2026-10-01"
+
+# Secrets and per-environment values go in the Cloudflare dashboard
+# (Pages > Settings > Variables and Secrets), or .dev.vars locally:
+#   CF_ACCOUNT_ID, CF_EMAIL_TOKEN   Cloudflare Email Service REST (beta), or
+#   RESEND_API_KEY      API key for Resend (secret)
+#   EMAIL_PROVIDER      optional: cloudflare | resend
+#   INQUIRY_TO          where inquiries are delivered, e.g. agent@example.com
+#   INQUIRY_FROM        verified sender, e.g. "Waluga Park <inquiries@yourdomain.com>"
+#   TURNSTILE_SECRET    optional, Cloudflare Turnstile secret key

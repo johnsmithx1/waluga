@@ -1,0 +1,587 @@
+{
+  "_note": "Extracted from the House West Design deck. option:true marks items the deck labels optional. review marks wording that looks like a typo or conflict and should be confirmed before publishing. Set \"public\": false on any room to hide it. Groups follow the deck order; the deck does not state which floor each room is on, so no level is shown.",
+  "rooms": [
+    {
+      "id": "exterior",
+      "name": "Exterior",
+      "public": true,
+      "selections": [
+        {
+          "k": "Stone",
+          "v": "Creative Mines Orchard Limestone"
+        },
+        {
+          "k": "Siding option",
+          "v": "Sagiper Copenhagen Oak metal",
+          "option": true
+        },
+        {
+          "k": "Siding option",
+          "v": "James Hardie board and batten, Rustic Grain, SW Analytical Gray",
+          "option": true
+        },
+        {
+          "k": "Garage door",
+          "v": "Recessed panel with windows, black"
+        },
+        {
+          "k": "Front door",
+          "v": "Optional stain grade, or SW 9618 Woodbridge paint",
+          "option": true
+        },
+        {
+          "k": "Pavers",
+          "v": "Belgard Origins, Victorian"
+        },
+        {
+          "k": "Lighting",
+          "v": "Bohen exterior lantern, 24 in. main areas, 14 in. at service doors"
+        },
+        {
+          "k": "Roof",
+          "v": "Landmark Cinder Black shingle; Metallion Loc Seam metal accent"
+        }
+      ],
+      "group": "Exterior"
+    },
+    {
+      "id": "foyer",
+      "name": "Foyer",
+      "public": true,
+      "selections": [
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        },
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        },
+        {
+          "k": "Lighting",
+          "v": "Esther flush mount"
+        },
+        {
+          "k": "Ceiling",
+          "v": "Crown and flatstock trim detail"
+        }
+      ],
+      "group": "Living spaces"
+    },
+    {
+      "id": "great-room",
+      "name": "Great room",
+      "public": true,
+      "selections": [
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        },
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        },
+        {
+          "k": "Cabinet finish",
+          "v": "2521-5005 CFC",
+          "review": "Confirm color name; deck lists a code only."
+        },
+        {
+          "k": "Lighting",
+          "v": "Clive chandelier; Caspian art light"
+        },
+        {
+          "k": "Fireplace surround",
+          "v": "Tumbleweed Cast, honed"
+        },
+        {
+          "k": "Fireplace stone",
+          "v": "Creative Mines Orchard Limestone"
+        }
+      ],
+      "group": "Living spaces"
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "public": true,
+      "selections": [
+        {
+          "k": "Counters and backsplash",
+          "v": "Taj Mahal brushed quartzite"
+        },
+        {
+          "k": "Hood",
+          "v": "BM 984 Stone Hearth"
+        },
+        {
+          "k": "Plumbing",
+          "v": "Brizzo Artesso, Luxe Gold"
+        },
+        {
+          "k": "Cabinet finish",
+          "v": "2521-5005 CFC",
+          "review": "Confirm color name; deck lists a code only."
+        },
+        {
+          "k": "Lighting",
+          "v": "Allston pendant"
+        },
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        },
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        }
+      ],
+      "group": "Living spaces"
+    },
+    {
+      "id": "dining",
+      "name": "Dining room",
+      "public": true,
+      "selections": [
+        {
+          "k": "Accent wall",
+          "v": "Creative Mines Orchard Limestone"
+        },
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        },
+        {
+          "k": "Lighting",
+          "v": "Benson chandelier"
+        },
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        }
+      ],
+      "group": "Living spaces"
+    },
+    {
+      "id": "powder",
+      "name": "Powder bath",
+      "public": true,
+      "selections": [
+        {
+          "k": "Plumbing",
+          "v": "Delta Nicoli"
+        },
+        {
+          "k": "Floor",
+          "v": "Fog White, honed",
+          "review": "Deck text reads \"Popeyes Fog White Honed\"; the first word looks like a typo. Confirm manufacturer."
+        },
+        {
+          "k": "Lighting",
+          "v": "Maliah pendant"
+        },
+        {
+          "k": "Walls and ceiling",
+          "v": "Marin 4 x 4 ceramic wall tile",
+          "option": true
+        },
+        {
+          "k": "Backsplash",
+          "v": "Taj Mahal brushed quartzite"
+        }
+      ],
+      "group": "Living spaces"
+    },
+    {
+      "id": "study",
+      "name": "Study",
+      "public": true,
+      "selections": [
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        },
+        {
+          "k": "Lighting",
+          "v": "Archive chandelier"
+        },
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        },
+        {
+          "k": "Doors",
+          "v": "Crown-detailed study doors"
+        }
+      ],
+      "group": "Living spaces"
+    },
+    {
+      "id": "mudroom",
+      "name": "Mudroom",
+      "public": true,
+      "selections": [
+        {
+          "k": "Cabinet finish",
+          "v": "BM 984 Stone Hearth"
+        },
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        },
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        }
+      ],
+      "group": "Living spaces"
+    },
+    {
+      "id": "stairs",
+      "name": "Stairs",
+      "public": true,
+      "selections": [
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        },
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        },
+        {
+          "k": "Railing",
+          "v": "Custom stair railing design"
+        }
+      ],
+      "group": "Living spaces"
+    },
+    {
+      "id": "primary-bedroom",
+      "name": "Primary bedroom",
+      "public": true,
+      "selections": [
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        },
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        },
+        {
+          "k": "Lighting",
+          "v": "Sinclair chandelier"
+        },
+        {
+          "k": "Details",
+          "v": "Wall trim, crown, ceiling trim, headboard wall"
+        }
+      ],
+      "group": "Primary suite"
+    },
+    {
+      "id": "primary-bath",
+      "name": "Primary bath",
+      "public": true,
+      "selections": [
+        {
+          "k": "Counters",
+          "v": "Calacatta Premata"
+        },
+        {
+          "k": "Plumbing",
+          "v": "Delta Broderick, Champagne Bronze"
+        },
+        {
+          "k": "Walls",
+          "v": "Marlow Desert, glossy"
+        },
+        {
+          "k": "Floor",
+          "v": "Merit Cool Beige; matte porcelain field tile in Alabaster"
+        },
+        {
+          "k": "Lighting",
+          "v": "Olivia sconce"
+        },
+        {
+          "k": "Cabinet finish",
+          "v": "2521-5005 CFC",
+          "review": "Confirm color name; deck lists a code only."
+        },
+        {
+          "k": "Tub",
+          "v": "Freestanding, framed wall"
+        }
+      ],
+      "group": "Primary suite"
+    },
+    {
+      "id": "primary-closet",
+      "name": "Primary closet",
+      "public": true,
+      "selections": [
+        {
+          "k": "Upgraded closet",
+          "v": "Natural Jute cabinet finish",
+          "option": true
+        },
+        {
+          "k": "Carpet",
+          "v": "Dwellings in Style DW288"
+        },
+        {
+          "k": "Lighting",
+          "v": "Alexandra pendant"
+        },
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        }
+      ],
+      "group": "Primary suite"
+    },
+    {
+      "id": "guest-beds",
+      "name": "Guest bedrooms 2 to 4",
+      "public": true,
+      "selections": [
+        {
+          "k": "Carpet",
+          "v": "Dwellings in Style DW288"
+        },
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        }
+      ],
+      "group": "Guest and utility"
+    },
+    {
+      "id": "upper-guest-bath",
+      "name": "Upper guest bath",
+      "public": true,
+      "selections": [
+        {
+          "k": "Counters",
+          "v": "Calacatta Premata"
+        },
+        {
+          "k": "Plumbing",
+          "v": "Delta Saylor, Champagne Bronze"
+        },
+        {
+          "k": "Floor",
+          "v": "Daltile Percussion, Taupe"
+        },
+        {
+          "k": "Shower walls",
+          "v": "Surface Art mural, Brume 6 x 6"
+        },
+        {
+          "k": "Cabinet finish and trim",
+          "v": "BM 984 Stone Hearth"
+        },
+        {
+          "k": "Lighting",
+          "v": "Weiland sconce"
+        }
+      ],
+      "group": "Guest and utility"
+    },
+    {
+      "id": "guest-bath-4",
+      "name": "Guest bath 4",
+      "public": true,
+      "selections": [
+        {
+          "k": "Counters",
+          "v": "Calacatta Premata"
+        },
+        {
+          "k": "Plumbing",
+          "v": "Delta Saylor, Champagne Bronze"
+        },
+        {
+          "k": "Floor",
+          "v": "Matte porcelain field tile, Alabaster"
+        },
+        {
+          "k": "Tub surround",
+          "v": "Coastal Cliff 2.5 x 5, glossy"
+        },
+        {
+          "k": "Cabinet finish",
+          "v": "BM 984 Stone Hearth"
+        },
+        {
+          "k": "Lighting",
+          "v": "Liquid pendant"
+        }
+      ],
+      "group": "Guest and utility"
+    },
+    {
+      "id": "laundry",
+      "name": "Laundry and utility",
+      "public": true,
+      "selections": [
+        {
+          "k": "Counters",
+          "v": "Calacatta Premata"
+        },
+        {
+          "k": "Backsplash",
+          "v": "Portico Pearl beveled tile"
+        },
+        {
+          "k": "Floor",
+          "v": "Merit Cool Beige; matte porcelain field tile in Alabaster"
+        },
+        {
+          "k": "Cabinet finish",
+          "v": "BM 984 Stone Hearth"
+        },
+        {
+          "k": "Lighting",
+          "v": "Gianna flush mount"
+        }
+      ],
+      "group": "Guest and utility"
+    },
+    {
+      "id": "basement-living",
+      "name": "Lower-level living",
+      "public": true,
+      "selections": [
+        {
+          "k": "Fireplace wall",
+          "v": "Creative Mines Orchard Limestone",
+          "option": true
+        },
+        {
+          "k": "Cabinetry and V-groove",
+          "v": "BM 984 Stone Hearth"
+        },
+        {
+          "k": "Built-ins and wall treatment",
+          "v": "Optional",
+          "option": true
+        },
+        {
+          "k": "Lighting",
+          "v": "Anderson chandelier"
+        },
+        {
+          "k": "Flooring",
+          "v": "Brushed Oak Maccaroon"
+        }
+      ],
+      "group": "Lower level"
+    },
+    {
+      "id": "basement-kitchenette",
+      "name": "Lower-level kitchenette",
+      "public": true,
+      "selections": [
+        {
+          "k": "Backsplash",
+          "v": "Terramor 12 x 47 Groove, Avorio, matte",
+          "review": "Deck also lists Taj Mahal brushed quartzite as backsplash here. Confirm which."
+        },
+        {
+          "k": "Plumbing",
+          "v": "Brizzo Artesso, Luxe Gold"
+        },
+        {
+          "k": "Cabinet finish",
+          "v": "2521-5005 CFC",
+          "review": "Confirm color name; deck lists a code only."
+        },
+        {
+          "k": "Lighting",
+          "v": "Anderson chandelier; Berg flush mount"
+        }
+      ],
+      "group": "Lower level"
+    },
+    {
+      "id": "basement-powder",
+      "name": "Lower-level powder bath",
+      "public": true,
+      "selections": [
+        {
+          "k": "Walls and cabinet",
+          "v": "BM 1595 Rocky Coast"
+        },
+        {
+          "k": "Plumbing",
+          "v": "Delta Saylor, Black"
+        },
+        {
+          "k": "Floor",
+          "v": "Soft textured matte porcelain offset mosaic"
+        },
+        {
+          "k": "Backsplash",
+          "v": "Taj Mahal brushed quartzite"
+        },
+        {
+          "k": "Lighting",
+          "v": "Altamont pendant"
+        }
+      ],
+      "group": "Lower level"
+    },
+    {
+      "id": "garage",
+      "name": "Garage",
+      "public": true,
+      "selections": [
+        {
+          "k": "Floor",
+          "v": "Epoxy, SW Analytical Gray"
+        },
+        {
+          "k": "Paint",
+          "v": "SW Drift of Mist"
+        }
+      ],
+      "group": "Whole home"
+    },
+    {
+      "id": "house-details",
+      "name": "Whole-home details",
+      "public": true,
+      "selections": [
+        {
+          "k": "Interior doors",
+          "v": "Masonite Logan 2-panel, solid core"
+        },
+        {
+          "k": "Door hardware",
+          "v": "Emtek Sion lever, black"
+        },
+        {
+          "k": "Main paint",
+          "v": "SW Drift of Mist at 75%"
+        },
+        {
+          "k": "Main carpet",
+          "v": "Dwellings DW288, Soft Pine"
+        },
+        {
+          "k": "Window treatments",
+          "v": "Marshall Sheer Weave 7250R-RL3 Sail",
+          "option": true
+        },
+        {
+          "k": "Base and case",
+          "v": "Flatstock"
+        }
+      ],
+      "group": "Whole home"
+    }
+  ]
+}
