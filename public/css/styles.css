@@ -114,7 +114,7 @@ details { border-bottom: 1px solid var(--line); }
 summary { cursor: pointer; list-style: none; padding: 16px 0; display: flex; justify-content: space-between; font: 400 22px/1.2 var(--serif); color: var(--bark); }
 summary::-webkit-details-marker { display: none; }
 summary::after { content: "+"; font: 300 24px/1 var(--sans); color: var(--gold); }
-details[open] summary::after { content: "–"; }
+details[open] > summary::after { content: "–"; }
 details ul { list-style: none; margin: 0 0 18px; padding: 0; columns: 2; column-gap: 56px; }
 details li { break-inside: avoid; padding: 6px 0; font-size: 15px; }
 details li b { font-weight: 400; color: var(--coast); display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
@@ -131,6 +131,23 @@ details li b { font-weight: 400; color: var(--coast); display: block; font-size:
 .entry .media { position: relative; aspect-ratio: 16 / 10; background: #3a3129; overflow: hidden; }
 .entry .media img, .entry .media video { width: 100%; height: 100%; object-fit: cover; }
 .entry .ph { background: repeating-linear-gradient(135deg, #43392f, #43392f 14px, #3a3129 14px, #3a3129 28px); color: var(--hearth); }
+
+/* material board */
+.fin-lede { color: var(--coast); margin: -4px 0 28px; }
+.board { list-style: none; padding: 0; margin: 0 0 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px 22px; }
+.mat-img { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--mist); border: 1px solid var(--line); }
+.mat-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.mat:hover .mat-img img { transform: scale(1.04); }
+.mat h3 { font-size: 20px; margin: 14px 0 4px; }
+.mat-note { margin: 0; font-size: 14px; color: var(--black); }
+.mat-where { margin: 4px 0 0; font: 400 11px/1.5 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
+details.schedule { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+details.schedule > summary { font: 400 12px/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--bark); padding: 20px 0; }
+details.schedule[open] > summary { border-bottom: 1px solid var(--line); }
+details.schedule #rooms { padding-bottom: 24px; }
+details.schedule #rooms details:last-child { border-bottom: 0; }
+@media (max-width: 960px) { .board { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .board { gap: 26px 14px; } .mat h3 { font-size: 17px; } }
 
 /* location */
 .loc-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(28px, 5vw, 64px); align-items: center; }

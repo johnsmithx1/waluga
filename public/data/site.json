@@ -154,5 +154,56 @@
     ],
     "note": "Distances and drive times are approximate, from mapping data.",
     "_source": "Coordinates are the Park Bluff Pl street centre from OpenStreetMap (house number not yet mapped). Drive times from OSRM; park distance is straight-line."
-  }
+  },
+  "materialBoard": [
+    {
+      "img": "assets/materials/flooring-oak.jpg",
+      "name": "Brushed Oak Maccaroon",
+      "note": "Wide-plank wood flooring",
+      "where": "Main floors throughout"
+    },
+    {
+      "img": "assets/materials/quartzite-taj-mahal.jpg",
+      "name": "Taj Mahal Quartzite",
+      "note": "Brushed natural quartzite",
+      "where": "Kitchen counters and backsplash"
+    },
+    {
+      "img": "assets/materials/quartz-calacatta.jpg",
+      "name": "Calacatta Premata",
+      "note": "Warm-veined white stone",
+      "where": "Primary bath, guest bath, and laundry counters"
+    },
+    {
+      "img": "assets/materials/cabinetry.jpg",
+      "name": "Warm wood cabinetry",
+      "note": "Natural wood-tone finish",
+      "where": "Kitchen and great room"
+    },
+    {
+      "img": "assets/materials/stone-limestone.jpg",
+      "name": "Orchard Limestone",
+      "note": "Creative Mines natural stone",
+      "where": "Exterior, great room fireplace, dining accent wall"
+    },
+    {
+      "img": "assets/materials/fixtures-luxe-gold.jpg",
+      "name": "Brizo Artesso, Luxe Gold",
+      "note": "Luxe gold and black fixtures",
+      "where": "Kitchen faucet shown"
+    },
+    {
+      "img": "assets/materials/roof-metal.jpg",
+      "name": "Metallion Loc Seam",
+      "note": "Standing-seam metal roofing",
+      "where": "Paired with Landmark Cinder Black shingles"
+    },
+    {
+      "img": "assets/materials/lantern-exterior.jpg",
+      "name": "Bohen exterior lantern",
+      "note": "24 in. at main entries, 14 in. at side doors",
+      "where": "Exterior lighting"
+    }
+  ],
+  "_materialBoardSource": "Swatches and names cropped from the House West Design deck (pages 9, 13, 15, 27)."
 }

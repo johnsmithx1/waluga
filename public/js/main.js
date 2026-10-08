@@ -172,7 +172,9 @@
   }
 
   function renderFinishes(site, rooms) {
-    $('#materials').append(...site.materials.map((m) => h('div', {}, h('dt', { text: m.k }), h('dd', { text: m.v }))));
+    $('#board').append(...(site.materialBoard || []).map((m) => h('li', { class: 'mat' },
+      h('div', { class: 'mat-img' }, picture({ src: m.img, alt: m.name + ' swatch', label: m.name })),
+      h('h3', { text: m.name }), h('p', { class: 'mat-note', text: m.note }), h('p', { class: 'mat-where', text: m.where }))));
     const order = ['Exterior', 'Living spaces', 'Primary suite', 'Guest and utility', 'Lower level', 'Whole home'];
     const wrap = $('#rooms');
     for (const g of order) {
