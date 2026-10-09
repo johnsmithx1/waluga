@@ -4,7 +4,8 @@
 //   Always:      INQUIRY_TO (comma separated), INQUIRY_FROM (address on a verified sending domain)
 //   Cloudflare:  CF_ACCOUNT_ID, CF_EMAIL_TOKEN (API token with Email Sending: Edit)
 //   Resend:      RESEND_API_KEY
-//   Optional:    EMAIL_PROVIDER = cloudflare | resend (default: cloudflare if its vars exist, else resend)
+//   Binding:     [[send_email]] name = "EMAIL" in wrangler.toml (preferred; no token)
+//   Optional:    EMAIL_PROVIDER = binding | cloudflare | resend (default: binding, then cloudflare REST, then resend)
 //                TURNSTILE_SECRET
 
 const json = (body, status = 200) =>
@@ -59,7 +60,7 @@ export async function onRequestPost({ request, env }) {
   };
 
   try {
-    const res = await (provider === 'cloudflare' ? sendCloudflare(env, mail) : sendResend(env, mail));
+    const res = await (provider === 'binding' ? sendBinding(env, mail) : provider === 'cloudflare' ? sendCloudflare(env, mail) : sendResend(env, mail));
     if (!res.ok) {
       console.error('inquire:', provider, 'failed', res.status, await res.text().catch(() => ''));
       return json({ error: 'We could not send your inquiry. Please try again.' }, 502);
@@ -73,6 +74,8 @@ export async function onRequestPost({ request, env }) {
 
 export function pickProvider(env) {
   const want = (env.EMAIL_PROVIDER || '').toLowerCase();
+  const bound = env.EMAIL && typeof env.EMAIL.send === 'function';
+  if (want === 'binding' || (!want && bound)) return bound ? 'binding' : null;
   const cf = env.CF_ACCOUNT_ID && env.CF_EMAIL_TOKEN, rs = env.RESEND_API_KEY;
   if (want === 'cloudflare') return cf ? 'cloudflare' : null;
   if (want === 'resend') return rs ? 'resend' : null;
@@ -92,6 +95,16 @@ async function sendCloudflare(env, m) {
   const res = await post({ ...base, reply_to: m.replyTo });
   if (res.status === 400) return post(base);
   return res;
+}
+
+// Cloudflare Email Service via the send_email binding (no API token needed).
+async function sendBinding(env, m) {
+  const r = await env.EMAIL.send({
+    from: { email: m.from, name: env.INQUIRY_FROM_NAME || 'Waluga Park Lot 9' },
+    to: m.to, replyTo: m.replyTo, subject: m.subject, html: m.html, text: m.text
+  });
+  console.log('inquire: sent via binding', r && r.messageId);
+  return new Response('ok', { status: 200 });
 }
 
 function sendResend(env, m) {

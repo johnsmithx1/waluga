@@ -44,6 +44,7 @@
   function renderHero(site) {
     const p = site.property, hero = site.hero;
     $('#status-pill').textContent = p.status;
+    if (p.price) { const pr = $('#hero-price'); pr.innerHTML = ''; pr.append(h('small', { text: 'Offered at' }), h('span', { text: p.price })); pr.hidden = false; }
     $('#hero-sub').textContent = p.subhead;
     const box = $('#hero-media');
     box.append(picture({ src: hero.image, fallback: hero.fallback, alt: hero.alt, label: 'Hero image' }));
@@ -193,13 +194,12 @@
       h('h3', { text: m.name }), h('p', { class: 'mat-note', text: m.note }), h('p', { class: 'mat-where', text: m.where }))));
     const order = ['Exterior', 'Living spaces', 'Primary suite', 'Guest and utility', 'Lower level', 'Whole home'];
     const wrap = $('#rooms');
-    $('#sch-count').textContent = `Every selection across ${rooms.length} rooms`;
     for (const g of order) {
       const list = rooms.filter((r) => r.group === g); if (!list.length) continue;
       wrap.append(h('p', { class: 'group-h', text: g }));
       for (const r of list) {
         wrap.append(h('details', {}, h('summary', { text: r.name }),
-          h('ul', {}, r.selections.map((s) => h('li', {}, h('b', { text: s.k }), s.v, s.option ? h('span', { class: 'badge', text: 'Optional' }) : null)))));
+          h('ul', {}, r.selections.map((s) => h('li', {}, h('b', { text: s.k }), s.v)))));
       }
     }
   }
@@ -240,6 +240,7 @@
     $('#foot-listing').append(h('p', { text: l.agent + (l.title ? ', ' + l.title : '') }), h('p', { text: l.broker }), h('p', { text: l.license }), l.phone ? h('p', {}, h('a', { href: 'tel:' + l.phone.replace(/[^\d+]/g, ''), text: l.phone })) : null, l.email ? h('p', {}, h('a', { href: 'mailto:' + l.email, text: l.email })) : null);
     $('#foot-credits').append(h('p', { text: 'Builder: ' + l.builder }), h('p', { text: 'Design: ' + l.designer }));
     $('#foot-disclaimer').textContent = site.disclaimer;
+    if (site.credit) { const c = $('#foot-credit'); c.append(site.credit.url ? h('a', { href: site.credit.url, target: '_blank', rel: 'noopener', text: site.credit.text }) : site.credit.text); }
   }
 
   // Forms

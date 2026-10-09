@@ -176,8 +176,7 @@
       "src": "assets/interiors/lower-living.jpg",
       "title": "Lower-level living",
       "group": "Lower level",
-      "type": "render",
-      "note": "Built-ins and wall treatment are optional."
+      "type": "render"
     },
     {
       "src": "assets/interiors/lower-kitchenette.jpg",

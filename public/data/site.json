@@ -33,7 +33,8 @@
       "Main",
       "Upper",
       "Lower"
-    ]
+    ],
+    "price": "$2,099,000"
   },
   "story": {
     "eyebrow": "Design for a more grounded life",
@@ -93,7 +94,7 @@
     }
   ],
   "listing": {
-    "broker": "TEC Real Estate | Ninebark Real Estate",
+    "broker": "Ninebark Real Estate",
     "agent": "Abby Moschetti",
     "license": "OR Lic. #201230030 \u00b7 WA Lic. #24003411",
     "builder": "Brother's Building",
@@ -205,5 +206,9 @@
       "where": "Exterior lighting"
     }
   ],
-  "_materialBoardSource": "Swatches and names cropped from the House West Design deck (pages 9, 13, 15, 27)."
+  "_materialBoardSource": "Swatches and names cropped from the House West Design deck (pages 9, 13, 15, 27).",
+  "credit": {
+    "text": "Website design by Alpha Visual Co. LLC",
+    "url": ""
+  }
 }

@@ -325,3 +325,10 @@ dialog#lightbox.single .lb-prev, dialog#lightbox.single .lb-next { visibility: h
 }
 @media (prefers-reduced-motion: reduce) { details.schedule > summary:hover .sch-icon { animation: none; } .hero-media.kb img, .reel-stage.swap img { animation: none; } }
 .schedule + .fine { margin-top: 14px; }
+
+/* price + credit */
+.hero-price { display: flex; align-items: baseline; gap: 12px; margin: -4px 0 18px; }
+.hero-price small { font: 400 11px/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: #e7dcc4; }
+.hero-price span { font: 400 clamp(26px, 3vw, 34px)/1 var(--serif); letter-spacing: .02em; color: #fff; }
+.foot .credit { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08); letter-spacing: .04em; }
+.foot .credit a { color: inherit; }

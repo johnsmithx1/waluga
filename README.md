@@ -1,12 +1,13 @@
 # Waluga Park Lot 9
 
 Marketing site for a new home in Lake Oswego, Oregon. Static front end in `public/`,
-one Cloudflare Pages Function for the inquiry form in `functions/api/inquire.js`.
+served by a Cloudflare Worker (`src/worker.js`) on https://4992parkbluff.com, which also handles the inquiry form (`src/inquire.js`).
 
 ## Run locally
 
     npm install
-    npm run dev          # http://localhost:8788, includes /api/inquire
+    npm install --include=dev
+    npm run dev          # http://localhost:8788, includes /api/inquire (email simulated locally)
 
 Static only (no form backend): `cd public && python3 -m http.server 8788`
 
@@ -60,9 +61,11 @@ Locally, put the same values in `.dev.vars` (git-ignored).
 
 ## Deploy
 
-    npm run deploy       # wrangler pages deploy public --project-name=waluga-park-lot-9
+    npm run deploy       # wrangler deploy (Worker + static assets + custom domains)
 
-or connect the git repo in Cloudflare Pages with build output directory `public` and no build command.
+The old Pages project (waluga-park-lot-9.pages.dev) now only 301-redirects to the domain.
+
+Inquiry email: Cloudflare Email Service via the `EMAIL` send_email binding (no API token). Sender inquiries@4992parkbluff.com; recipient is `INQUIRY_TO` in wrangler.toml.
 
 ## Open items before launch
 
