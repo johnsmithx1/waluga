@@ -48,14 +48,22 @@ export async function onRequestPost({ request, env }) {
 
   const rows = [['Name', lead.name], ['Email', lead.email], ['Phone', lead.phone], ['Representation', lead.representation], ['Timeline', lead.timeline], ['Interest', lead.interest], ['Message', lead.message], ['Page', lead.page]]
     .filter(([, v]) => v);
-  const html = `<h2>New inquiry: Waluga Park Lot 9</h2><table cellpadding="6">${rows
-    .map(([k, v]) => `<tr><td><b>${esc(k)}</b></td><td>${esc(v).replace(/\n/g, '<br>')}</td></tr>`).join('')}</table>`;
-  const text = rows.map(([k, v]) => `${k}: ${v}`).join('\n');
+  const cell = (v) => esc(v).replace(/\n/g, '<br>');
+  const html = `<!doctype html><html><body style="margin:0;padding:24px;background:#f4f1ec;font-family:Helvetica,Arial,sans-serif;color:#2f2e2d">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;margin:0 auto;background:#ffffff;border:1px solid #e3ddd1">
+<tr><td style="padding:22px 26px;border-bottom:1px solid #e3ddd1"><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8c7a58">4992 Park Bluff Pl &middot; Lake Oswego</div>
+<div style="font-size:20px;margin-top:6px;color:#4a3f35">New inquiry from ${esc(lead.name)}</div></td></tr>
+<tr><td style="padding:18px 26px"><table role="presentation" width="100%" cellpadding="6" cellspacing="0" style="font-size:14px;line-height:1.5">
+${rows.map(([k, v]) => `<tr><td style="width:120px;color:#6e7273;vertical-align:top">${esc(k)}</td><td>${cell(v)}</td></tr>`).join('')}
+</table></td></tr>
+<tr><td style="padding:14px 26px 22px;font-size:12px;color:#6e7273">Reply to this email to respond to ${esc(lead.name)} directly. Sent from the inquiry form at 4992parkbluff.com.</td></tr>
+</table></body></html>`;
+  const text = `New inquiry for 4992 Park Bluff Pl, Lake Oswego\n\n${rows.map(([k, v]) => `${k}: ${v}`).join('\n')}\n\nReply to this email to respond to ${lead.name} directly.`;
   const mail = {
     from: env.INQUIRY_FROM,
     to: env.INQUIRY_TO.split(',').map((x) => x.trim()).filter(Boolean),
     replyTo: lead.email,
-    subject: `Waluga Park Lot 9 inquiry from ${lead.name}`,
+    subject: `New inquiry: 4992 Park Bluff Pl from ${lead.name}`,
     html, text
   };
 

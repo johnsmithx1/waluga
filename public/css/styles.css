@@ -332,3 +332,23 @@ dialog#lightbox.single .lb-prev, dialog#lightbox.single .lb-next { visibility: h
 .hero-price span { font: 400 clamp(26px, 3vw, 34px)/1 var(--serif); letter-spacing: .02em; color: #fff; }
 .foot .credit { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08); letter-spacing: .04em; }
 .foot .credit a { color: inherit; }
+
+/* mobile menu */
+.menu-btn { display: none; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); background: transparent; cursor: pointer; flex: none; position: relative; }
+.menu-btn span { position: absolute; left: 12px; right: 12px; height: 1.5px; background: var(--bark); transition: transform .25s, opacity .2s, top .25s; }
+.menu-btn span:nth-child(1) { top: 15px; } .menu-btn span:nth-child(2) { top: 21px; } .menu-btn span:nth-child(3) { top: 27px; }
+.menu-btn[aria-expanded=true] span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+.menu-btn[aria-expanded=true] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded=true] span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+.menu { position: fixed; z-index: 49; inset: 73px 0 auto 0; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 18px 40px rgba(0,0,0,.12); padding: 8px var(--gutter) 20px; display: grid; animation: menuin .22s ease; }
+.menu[hidden] { display: none; }
+.menu a { padding: 15px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--bark); font: 400 22px/1.2 var(--serif); }
+.menu a:last-child { border-bottom: 0; color: var(--gold); }
+@keyframes menuin { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+@media (max-width: 960px) {
+  .menu-btn { display: block; }
+  .top { gap: 12px; }
+  .top .btn-small { margin-left: auto; }
+}
+@media (max-width: 380px) { .top .btn-small { padding: 12px 14px; } .brand { font-size: 19px; } }
+@media (prefers-reduced-motion: reduce) { .menu { animation: none; } .menu-btn span { transition: none; } }

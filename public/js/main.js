@@ -85,6 +85,18 @@
     }));
   }
 
+  // Mobile menu
+  const menuBtn = $('#menu-btn'), menu = $('#menu');
+  const setMenu = (open) => {
+    menu.hidden = !open; menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.documentElement.classList.toggle('menu-open', open);
+  };
+  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+  menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); } });
+  matchMedia('(min-width: 961px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+
   // Lightbox
   const lb = $('#lightbox'); let lbItems = [], lbIndex = 0;
   function lbShow() {

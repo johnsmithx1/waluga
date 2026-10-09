@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "description": "Marketing site for Waluga Park Lot 9, Lake Oswego",
   "scripts": {
-    "dev": "wrangler dev --port 8788",
+    "dev": "wrangler dev --port 8788 --var LOCAL_DEV:1",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
