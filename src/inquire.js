@@ -108,7 +108,7 @@ async function sendCloudflare(env, m) {
 // Cloudflare Email Service via the send_email binding (no API token needed).
 async function sendBinding(env, m) {
   const r = await env.EMAIL.send({
-    from: { email: m.from, name: env.INQUIRY_FROM_NAME || 'Waluga Park Lot 9' },
+    from: { email: m.from, name: env.INQUIRY_FROM_NAME || '4992 Park Bluff Pl' },
     to: m.to, replyTo: m.replyTo, subject: m.subject, html: m.html, text: m.text
   });
   console.log('inquire: sent via binding', r && r.messageId);

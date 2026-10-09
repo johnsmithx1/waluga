@@ -1,4 +1,4 @@
-/* Waluga Park Lot 9
+/* Waluga Park, 4992 Park Bluff Pl
    Palette is taken from the House West Design deck (Drift of Mist, Stone Hearth,
    Rocky Coast, Black Magic) plus the deck's warm brown and gold. Hex values were
    sampled by eye from the deck pages; adjust the tokens below to fine-tune. */
@@ -285,7 +285,7 @@ dialog#lightbox button { background: none; border: 0; color: #fff; font-size: 44
 .hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
 .film-btn { background: none; border: 0; border-bottom: 1px solid rgba(255,255,255,.5); color: #fff; font: 400 12px/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; padding: 8px 0; cursor: pointer; }
 .film-btn:hover { border-color: #fff; }
-.film-btn span { font-size: 10px; margin-right: 8px; }
+.film-btn .play { width: 9px; height: 11px; fill: currentColor; margin-right: 10px; vertical-align: -1px; }
 .mock { position: relative; }
 .mock img { max-height: 80vh; margin: 0 auto; filter: brightness(.55); }
 .mock-play { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px; font: 400 13px/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; }
@@ -352,3 +352,11 @@ dialog#lightbox.single .lb-prev, dialog#lightbox.single .lb-next { visibility: h
 }
 @media (max-width: 380px) { .top .btn-small { padding: 12px 14px; } .brand { font-size: 19px; } }
 @media (prefers-reduced-motion: reduce) { .menu { animation: none; } .menu-btn span { transition: none; } }
+
+/* header fit on small phones */
+@media (max-width: 960px) {
+  .top { padding-left: max(var(--gutter), env(safe-area-inset-left)); padding-right: max(var(--gutter), env(safe-area-inset-right)); }
+  .brand { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .top .btn-small, .menu-btn { flex-shrink: 0; }
+}
+@media (max-width: 420px) { .top .btn-small { padding: 11px 14px; letter-spacing: .16em; } .brand { font-size: 20px; } }

@@ -1,8 +1,8 @@
 {
   "_note": "Edit this file to change copy and facts. Items with \"confirm\": true need a decision from the client before launch.",
   "property": {
-    "name": "Waluga Park Lot 9",
-    "short": "Waluga Park \u00b7 Lot 9",
+    "name": "Waluga Park",
+    "short": "Waluga Park",
     "city": "Lake Oswego, Oregon",
     "status": "Coming Spring 2027",
     "headline": "A quieter kind of luxury",
@@ -109,7 +109,7 @@
     "image": "assets/media/hero.jpg",
     "video": "assets/media/hero.mp4",
     "fallback": "assets/_deck/exterior.jpg",
-    "alt": "Exterior rendering of Waluga Park Lot 9"
+    "alt": "Exterior rendering of 4992 Park Bluff Pl at Waluga Park"
   },
   "floorplans": [
     {
@@ -130,7 +130,7 @@
   ],
   "neighborhood": {
     "title": "Waluga Park, Lake Oswego",
-    "body": "Lot 9 sits on Park Bluff Place, beside Waluga Park, a short drive from Lake Grove and downtown Lake Oswego.",
+    "body": "The home sits on Park Bluff Place, beside Waluga Park, a short drive from Lake Grove and downtown Lake Oswego.",
     "confirm": "Copy is limited to verifiable facts. Have the agent approve or expand it."
   },
   "location": {
