@@ -21,7 +21,7 @@ allowed_sender_addresses = ["inquiries@4992parkbluff.com"]
 [vars]
 INQUIRY_FROM = "inquiries@4992parkbluff.com"
 INQUIRY_FROM_NAME = "4992 Park Bluff Pl"
-# Smoke test recipient. Switch to abby.m.realtor@gmail.com after the test passes.
-INQUIRY_TO = "stanley.travis@gmail.com"
+# Inquiry recipient (listing agent). Comma-separate to add more.
+INQUIRY_TO = "abby.m.realtor@gmail.com"
 
 # Optional secrets: TURNSTILE_SECRET (spam check). EMAIL_PROVIDER=binding|cloudflare|resend overrides.
